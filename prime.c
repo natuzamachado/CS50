@@ -2,11 +2,14 @@
 #include <cs50.h>
 
 int main(void) {
+
+    // get user input for minimum and a maximum number;
     
     int minimum = get_int("Minimum: ");
 
     int maximum = get_int("Maximum: ");
-    // get user input for minimum and a maximum number;
+
+    //minimum and maximum should be positive numbers greater than zero;
     
     while (minimum < 0 || maximum < 0){
        minimum = get_int("Minimum: ");
