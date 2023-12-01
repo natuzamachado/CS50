@@ -6,7 +6,9 @@ int main(void) {
     
     float bill;
     float tax;
-    float tip;
+    int tip;
+    
+    float tipWithBill
     float totalBill;
     float half;
 
@@ -26,17 +28,18 @@ int main(void) {
 
     do 
     {
-        tip = get_float("Tip percent: ");
+        tip = get_int("Tip percent: ");
 
     }  while (tip < 0);
    
           
     // calculate tax, tip, total bill and its half 
     
-    tax = bill * (tax / 100);
-    tip = (bill + tax) * (tip / 100);
-    totalBill =  bill + tax + tip;
-    half = totalBill / 2;
+          tax = bill * (tax / 100);
+          tipWithBill = (bill + tax) * ((float) tip / 100);
+    
+          totalBill =  bill + tax + tipWithBill;
+          half = totalBill / 2;
 
     printf("You will owe %.2f each!\n", half);
 }
