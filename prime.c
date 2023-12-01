@@ -11,10 +11,17 @@ int main(void) {
 
     //minimum and maximum should be positive numbers greater than zero;
     
-    while (minimum < 0 || maximum < 0){
-       minimum = get_int("Minimum: ");
-       maximum = get_int("Maximum: ");
-    }
+    do
+    {
+        minimum = get_int("Minimum: ");
+      
+    } while (minimum < 0);
+
+    do
+    {
+        maximum = get_int("Maximum: ");
+
+    } while (maximum < 0);
           
     // prime is a number that is only divisible by 1 and itself
     //print only prime numbers between minimum and maximum
