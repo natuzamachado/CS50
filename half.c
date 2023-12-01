@@ -8,7 +8,7 @@ int main(void) {
     float tax;
     int tip;
     
-    float tipWithBill
+    float tipWithBill;
     float totalBill;
     float half;
 
