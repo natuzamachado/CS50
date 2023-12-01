@@ -2,25 +2,41 @@
 #include <cs50.h>
 
 int main(void) {
-    
-    int minimum = get_int("Minimum: ");
 
-    int maximum = get_int("Maximum: ");
-    // get user input for minimum and a maximum number;
     
-    while (minimum < 0 || maximum < 0){
-       minimum = get_int("Minimum: ");
-       maximum = get_int("Maximum: ");
-    }
-          
-    // prime is a number that is only divisible by 1 and itself
-    //print only prime numbers between minimum and maximum
+    float bill;
+    float tax;
+    float tip;
+    float totalBill;
+    float half;
+
+    // get a positive input for the bill, tax, and tip;
+    
+    do {
+
+        bill = get_float("Bill before tax and tip: ");
+    
+    } while (bill < 0);
+    
+    do 
+    {
+       tax = get_float("Sale Tax Percent: ");
+
+    } while (tax < 0);
+
+    do 
+    {
+        tip = get_float("Tip percent: ");
+
+    }  while (tip < 0);
    
-        for (int i = minimum; i <= maximum; i++)
-        {   
-            if ( i != 1 && i % 2 != 0 || i == 2)
-            {
-                printf("%i\n", i);
-            }
-        }
+          
+    // calculate tax, tip, total bill and its half 
+    
+    tax = bill * (tax / 100);
+    tip = (bill + tax) * (tip / 100);
+    totalBill =  bill + tax + tip;
+    half = totalBill / 2;
+
+    printf("You will owe %.2f each!\n", half);
 }
