@@ -50,6 +50,11 @@ bool isPrime(int num)
     {
         return true;
     }
+    
+    if (num % 2 == 0)
+    {
+        return false;
+    }
 
     for (int i = 2; i < num; i++)
     {
